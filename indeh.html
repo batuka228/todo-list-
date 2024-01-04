@@ -13,30 +13,28 @@
             To do
             <div class="count">0</div>
           </div>
-          <div class="boxIn flex row align_center">
-            <div class="boxIn-img flex justify_center align_center">
-              <img src="./imgs/check.png" alt="" />
-            </div>
-            <div class="boxIn-main flex column">
-              <div class="boxIn-mainHeader">To do</div>
-              <div class="boxIn-mainMidle">Holy fuck</div>
-              <div class="boxIn-mainPriority">High</div>
-            </div>
-            <div class="boxIn-mainButtons flex column justify_center">
-              <button class="boxIn-mainBotton flex align_center justify_center">
-                <img src="./imgs/close.png" alt="" />
-              </button>
-              <button class="boxIn-mainBotton flex align_center justify_center">
-                <img src="./imgs/edit.png" alt="" />
-              </button>
-            </div>
-          </div>
-          <button class="box-InBotton flex align_center">
+          
+          <button onclick="show()" class="box-InBotton flex align_center">
             <img src="./imgs/plus.png" alt="" />
             Add card
           </button>
         </div>
       </div>
+      <div class="modalContainer">
+        <div class="modal">
+          <p>Title</p>
+          <input id="title-input" type="text" />
+          <p>description</p>
+          <input id="description-input" type="text" />
+          <p>status</p>
+          <input id="status-input" type="text" />
+          <p>priority</p>
+          <input id="priority-input" type="text" />
+          <button onclick="addTodo()">Submit</button>
+          <button onclick="hide()">hide</button>
+        </div>
+      </div>
     </section>
+    <script src="./tode.js"></script>
   </body>
 </html>
