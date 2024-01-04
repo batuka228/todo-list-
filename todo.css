@@ -1,0 +1,91 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-repeat: no-repeat;
+  background-image: url(https://cdn.wallpapersafari.com/93/57/8PXxWV.jpeg);
+  background-size: 100% 100%;
+}
+.container {
+  width: 100%;
+  height: 50%;
+}
+.flex {
+  display: flex;
+}
+.justify_center {
+  justify-content: center;
+}
+.align_center {
+  align-items: center;
+}
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+.boxHeader {
+  font-size: 28px;
+  color: black;
+  gap: 8px;
+}
+.count {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.box {
+  height: fit-content;
+  border-radius: 8px;
+  padding: 8px;
+  gap: 8px;
+  background-color: #ebecf0;
+  width: 280px;
+}
+.boxIn {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  cursor: grab;
+  display: flex;
+  gap: 8px;
+}
+.boxIn-main {
+  gap: 4px;
+}
+.boxIn-img {
+  border-radius: 50%;
+  border: 0.5px solid black;
+}
+.boxIn-img img {
+  width: 80%;
+  height: 80%;
+}
+.boxIn-mainPriority {
+  width: fit-content;
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: grab;
+}
+.box-InBotton {
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  gap: 16px;
+}
+.boxIn-mainBotton {
+  border-radius: 50%;
+  border: 0.5px solid black;
+  width: 30px;
+  height: 30px;
+}
+.boxIn-mainButtons {
+  gap: 8px;
+}
+.boxIn-mainBotton img {
+  width: 80%;
+  height: 80%;
+}
