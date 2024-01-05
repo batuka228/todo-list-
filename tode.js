@@ -9,17 +9,19 @@ const allowDrop = (event) => {
   event.preventDefault();
 };
 const drag = (event) => {
+  console.log(event.target);
   event.dataTransfer.setData("text", event.target.id);
 };
 const drop = (event) => {
   event.preventDefault();
   const boxId = event.dataTransfer.getData("text");
+  console.log(boxId);
   event.target.appendChild(document.getElementById(boxId));
 };
 const render = () => {
   let boxString = "";
   boxArray.forEach((el, i) => {
-    boxString += `<div draggable="true" class="drag-section flex row align_center">
+    boxString += `<div draggable="true" ondragstart="drag(event)" id="drag-123" class="drag-section flex row align_center">
     <div class="flex boxIn-1">
       <div class="boxIn-img flex justify_center align_center">
         <img src="./imgs/check.png" alt="" />
@@ -45,7 +47,7 @@ const render = () => {
     </div>
   </div>`;
     switch (el.status) {
-      case "done":
+      case "todo":
         document.getElementById("boxIn_todo").innerHTML = boxString;
         break;
       case "inprogress":
