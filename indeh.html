@@ -9,11 +9,68 @@
     <section class="container flex justify_center align_center">
       <div class="main flex justify_center row align_center">
         <div class="box flex column justify_center">
-          <div class="boxHeader flex align_center row">
+          <div class="boxHeader flex align_center row" id="todo">
             To do
             <div class="count">0</div>
           </div>
-          
+          <div
+            ondragover="allowDrop(event)"
+            ondrop="drop(event)"
+            class="boxIn flex row align_center"
+            id="boxIn_todo"
+          ></div>
+
+          <button onclick="show()" class="box-InBotton flex align_center">
+            <img src="./imgs/plus.png" alt="" />
+            Add card
+          </button>
+        </div>
+        <div class="box flex column justify_center">
+          <div class="boxHeader flex align_center row" id="inprogress">
+            In progress
+            <div class="count">0</div>
+          </div>
+          <div
+            ondragover="allowDrop(event)"
+            ondrop="drop(event)"
+            class="boxIn flex row align_center"
+            id="boxIn_Inprogress"
+          ></div>
+
+          <button onclick="show()" class="box-InBotton flex align_center">
+            <img src="./imgs/plus.png" alt="" />
+            Add card
+          </button>
+        </div>
+        <div class="box flex column justify_center">
+          <div class="boxHeader flex align_center row" id="Stuck">
+            Stuck
+            <div class="count">0</div>
+          </div>
+          <div
+            ondragover="allowDrop(event)"
+            ondrop="drop(event)"
+            class="boxIn flex row align_center"
+            id="boxIn_Stuck"
+          ></div>
+
+          <button onclick="show()" class="box-InBotton flex align_center">
+            <img src="./imgs/plus.png" alt="" />
+            Add card
+          </button>
+        </div>
+        <div class="box flex column justify_center">
+          <div class="boxHeader flex align_center row" id="done">
+            done
+            <div class="count">0</div>
+          </div>
+          <div
+            ondragover="allowDrop(event)"
+            ondrop="drop(event)"
+            class="boxIn flex row align_center"
+            id="boxIn_done"
+          ></div>
+
           <button onclick="show()" class="box-InBotton flex align_center">
             <img src="./imgs/plus.png" alt="" />
             Add card
@@ -21,17 +78,27 @@
         </div>
       </div>
       <div class="modalContainer">
-        <div class="modal">
+        <div class="modal flex column">
           <p>Title</p>
           <input id="title-input" type="text" />
           <p>description</p>
           <input id="description-input" type="text" />
           <p>status</p>
-          <input id="status-input" type="text" />
+          <select name="status" id="status-input">
+            <option value="todo">To do</option>
+            <option value="inprogress">In progress</option>
+            <option value="stuck">Stuck</option>
+            <option value="done">Done</option>
+          </select>
           <p>priority</p>
-          <input id="priority-input" type="text" />
-          <button onclick="addTodo()">Submit</button>
-          <button onclick="hide()">hide</button>
+          <select name="priority" id="priority-input">
+            <option value="high">high</option>
+            <option value="meduim">meduim</option>
+            <option value="low">low</option>
+          </select>
+          <div>
+            <button onclick="addTodo()">Submit</button>
+          </div>
         </div>
       </div>
     </section>
